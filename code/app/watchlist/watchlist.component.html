@@ -1,0 +1,9 @@
+  <div *ngFor="let item of items">
+    <span> {{ item.title }} </span>
+    <span> {{ item.genre }} </span>
+    <span> {{ item.year }} </span>
+    <button (click)="watchTrailer(item.trailer)">Watch Trailer</button>
+    <button (click)="removeMovie(item)">Remove from List</button>
+  </div>
+
+<button (click)="clearWatchList()">Clear Watch List</button>

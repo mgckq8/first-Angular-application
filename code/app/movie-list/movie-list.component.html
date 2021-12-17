@@ -1,0 +1,18 @@
+<div id="genreDiv">
+  <button class="genreButton" (click)="showComedy()">Comedy</button>
+  <button class="genreButton" (click)="showHorror()">Horror</button>
+  <button class="genreButton" (click)="showAction()">Action</button>
+  <button class="genreButton" (click)="showRomance()">Romance</button>
+  <button class="genreButton" (click)="showAll()">Show All</button>
+</div>
+
+<div id="wrapper" *ngFor="let movie of movies">
+  <div id="movieDiv">
+  <!-- I used this source to help me with the <img> tag -->
+  <!-- https://angular.io/guide/property-binding#property-binding-and-interpolation -->
+    <img [src]="movie.photo">
+  </div>
+  <div class="buttonDiv">
+    <button (click)="addToWatchList(movie)">Add to Watchlist</button>
+  </div>
+</div>
